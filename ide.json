@@ -1,0 +1,19 @@
+{
+    "$schema": "http://laravel-ide.com/schema/laravel-ide-v1.json",
+    "view": {
+        "paths": [
+            {
+                "path": "source"
+            }
+        ]
+    },
+    "blade": {
+        "components": {
+            "viewPaths": [
+                {
+                    "path": "source/_components"
+                }
+            ]
+        }
+    }
+}

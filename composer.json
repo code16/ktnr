@@ -1,0 +1,22 @@
+{
+    "require": {
+        "code16/jigsaw": "dev-main"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/code16/jigsaw"
+        }
+    ],
+    "require-dev": {
+        "spatie/ray": "^1.36"
+    },
+    "autoload": {
+        "psr-4": {
+            "Components\\": "components"
+        }
+    },
+    "config": {
+        "github-protocols": ["https"]
+    }
+}
