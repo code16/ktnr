@@ -5,6 +5,4 @@
 
 @import 'tailwindcss/utilities';
 
-:root {
-  --primary: #2563eb;
-}
+@import "fonts.css";

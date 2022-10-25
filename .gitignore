@@ -1,5 +1,6 @@
 /build_local/
 /cache/
+/jocko_cache/
 /node_modules/
 /vendor/
 /.idea/

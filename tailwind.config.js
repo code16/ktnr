@@ -1,4 +1,6 @@
-
+const tailwind = {
+  defaultTheme: require('tailwindcss/defaultTheme'),
+}
 
 module.exports = {
   content: [
@@ -9,9 +11,21 @@ module.exports = {
     ]),
   ],
   theme: {
+    screens: {
+      'sm': '640px',
+      'md': '768px',
+      'lg': '1024px',
+      'xl': '1280px',
+    },
     extend: {
       colors: {
-        primary: 'var(--primary)',
+        orange: '#FF6D00',
+      },
+      fontFamily: {
+        'sans': ['Century Gothic', ...tailwind.defaultTheme.fontFamily.sans],
+      },
+      fontSize: {
+        '7xl': ['4rem', '.8'],
       }
     },
   },

@@ -13,6 +13,10 @@
         <title>{{ $page->title ? $page->title . ' - ' : '' }}{{ $page->siteName }}</title>
         <link rel="stylesheet" href="{{ mix('css/main.css', 'assets/build') }}">
         <script defer src="{{ mix('js/main.js', 'assets/build') }}"></script>
+
+        <link rel="preload" href="/assets/fonts/CenturyGothic.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/assets/fonts/CenturyGothic-Bold.woff2" as="font" type="font/woff2" crossorigin>
+
         @if(!$page->production)
             <script src="https://cdn.tailwindcss.com"></script>
             <script>
@@ -22,9 +26,10 @@
             </script>
         @endif
     </head>
-    <body class="text-gray-900 font-sans antialiased">
+    <body class="bg-black text-white font-sans antialiased">
         <div class="flex flex-col min-h-screen">
-            <x-header />
+            <x-header :active-nav="$activeNav ?? null" />
+
             <div class="flex-grow">
                 <x-container>
                     {{ $slot }}

@@ -4,7 +4,7 @@
  */
 @endphp
 
-<x-layout>
+<x-layout active-nav="spaces">
     <h1 class="text-3xl font-bold">{{ $page->title }}</h1>
 
     @if($page->cover)
