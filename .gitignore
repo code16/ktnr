@@ -8,8 +8,6 @@
 npm-debug.log
 .env
 .DS_Store
-# ignoring composer.lock because netlify is running php 8.0
-composer.lock
 
 # Optional ignores
 /build_staging/
