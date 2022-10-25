@@ -26,7 +26,7 @@
                 La caténaire,<br>
                 <small class="text-[.7em]">c’est quoi&nbsp;?</small>
             </h2>
-            <x-content>
+            <x-content class="text-lg">
                 {!! $page->getContent() !!}
             </x-content>
         </div>

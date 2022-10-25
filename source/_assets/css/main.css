@@ -1,8 +1,14 @@
+@import "fonts.css";
 @import 'tailwindcss/base';
 
 @import 'tailwindcss/components';
 @import './components/content.css';
+@import './components/marquee-link.css';
 
 @import 'tailwindcss/utilities';
 
-@import "fonts.css";
+@layer base {
+  svg {
+    fill: currentColor;
+  }
+}

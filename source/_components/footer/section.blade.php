@@ -4,11 +4,11 @@
 ])
 
 <div>
-    <h2 class="uppercase font-bold mb-4">
+    <h2 class="uppercase font-bold text-lg mb-3">
         {{ $title }}
     </h2>
 
-    <div>
+    <div class="text-sm">
         {{ $slot }}
     </div>
 </div>

@@ -35,6 +35,8 @@
                     {{ $slot }}
                 </x-container>
             </div>
+
+            <x-marquee-bar />
             <x-footer />
         </div>
     </body>

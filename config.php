@@ -29,7 +29,7 @@ return [
         ],
         'residents' => [],
         'spaces' => [
-            'path' => 'espace',
+            'path' => 'espace/{slug}',
             'extends' => '_layouts.space',
             'section' => 'content',
         ],
