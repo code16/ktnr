@@ -19,12 +19,13 @@ module.exports = {
     },
     extend: {
       colors: {
-        orange: '#FF6D00',
+        orange: 'var(--primary)',
       },
       fontFamily: {
         'sans': ['Century Gothic', ...tailwind.defaultTheme.fontFamily.sans],
       },
       fontSize: {
+        '5xl': ['3rem', '1.2'],
         '7xl': ['4rem', '.8'],
       }
     },

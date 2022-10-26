@@ -12,7 +12,6 @@
 
         <title>{{ $page->title ? $page->title . ' - ' : '' }}{{ $page->siteName }}</title>
         <link rel="stylesheet" href="{{ mix('css/main.css', 'assets/build') }}">
-        <script defer src="{{ mix('js/main.js', 'assets/build') }}"></script>
 
         <link rel="preload" href="/assets/fonts/CenturyGothic.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="/assets/fonts/CenturyGothic-Bold.woff2" as="font" type="font/woff2" crossorigin>
@@ -27,17 +26,23 @@
         @endif
     </head>
     <body class="bg-black text-white font-sans antialiased">
-        <div class="flex flex-col min-h-screen">
-            <x-header :active-nav="$activeNav ?? null" />
+        <div class="flex flex-col min-h-screen overflow-x-hidden">
+            <x-header :active-nav="$activeNav" />
 
-            <div class="flex-grow">
-                <x-container>
+            <div class="flex-grow pb-16">
+                @if($container)
+                    <x-container>
+                        {{ $slot }}
+                    </x-container>
+                @else
                     {{ $slot }}
-                </x-container>
+                @endif
             </div>
 
             <x-marquee-bar />
             <x-footer />
         </div>
+        @stack('script')
+        <script src="{{ mix('js/main.js', 'assets/build') }}"></script>
     </body>
 </html>

@@ -7,11 +7,11 @@ pagination:
 <x-layout active-nav="events">
     <x-layout.events :pagination="$pagination">
         <x-slot:title>
-            Les événements à La Caténaire
+            Historique des événements
         </x-slot:title>
 
         <x-slot:link href="{{ url('/evenements') }}">
-            Historique des événements
+            Retour aux événements actuels
         </x-slot:link>
     </x-layout.events>
 </x-layout>

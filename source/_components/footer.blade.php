@@ -38,5 +38,4 @@
             </div>
         </x-container>
     </div>
-
 </footer>

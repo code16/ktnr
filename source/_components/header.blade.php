@@ -12,19 +12,27 @@
                         <img width="250" src="/assets/img/logo.png" alt="La Caténaire">
                     </a>
                 </div>
-                <div class="flex">
-                    <x-header.nav-item href="/evenements" :active="$activeNav === 'events'">
-                        Nos événements
-                    </x-header.nav-item>
-                    <x-header.nav-item href="/residents" :active="$activeNav === 'residents'">
-                        Les résidents
-                    </x-header.nav-item>
-                    <x-header.nav-item :href="$spaces->first()?->getUrl()" :active="$activeNav === 'spaces'">
-                        Nos espaces
-                    </x-header.nav-item>
-                    <x-header.nav-item href="/contact" :active="$activeNav === 'contact'">
-                        Contact
-                    </x-header.nav-item>
+                <div x-data="{ open: false }">
+                    <div class="md:hidden">
+                        <button class="flex items-center justify-center w-full p-4 focus:outline-none" @click="open = !open">
+                            <x-icon-menu class="mr-2" width="1.5rem" height="1.5rem" />
+                            Menu
+                        </button>
+                    </div>
+                    <div class="md:!grid md:!h-auto md:!overflow-visible md:grid-flow-col " x-show="open" x-collapse>
+                        <x-header.nav-item href="/evenements" :active="$activeNav === 'events'">
+                            Nos événements
+                        </x-header.nav-item>
+                        <x-header.nav-item href="/residents" :active="$activeNav === 'residents'">
+                            Les résidents
+                        </x-header.nav-item>
+                        <x-header.nav-item :href="$spaces->first()?->getUrl()" :active="$activeNav === 'spaces'">
+                            Nos espaces
+                        </x-header.nav-item>
+                        <x-header.nav-item href="/contact" :active="$activeNav === 'contact'">
+                            Contact
+                        </x-header.nav-item>
+                    </div>
                 </div>
             </div>
         </div>
