@@ -5,15 +5,12 @@
     'link' => null,
 ])
 
-<div class="px-8">
-    <div class="relative mb-16">
-        <img class="absolute top-0 left-0 -translate-y-3/4 -translate-x-1/3"
-            src="/assets/img/boom-title.png" width="100" role="presentation" alt="">
-
-        <h1 class="text-5xl text-orange font-bold italic">
+<div class="px-[var(--padding-x)] [--padding-x:1rem] lg:[--padding-x:2rem]">
+    <x-boom-title orange>
+        <h1>
             {{ $title }}
         </h1>
-    </div>
+    </x-boom-title>
 
     @foreach($pagination->items as $event)
         <x-event-item :event="$event" :light="$loop->even" />

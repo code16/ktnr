@@ -6,17 +6,20 @@ function isPastEvent($event): bool
 }
 
 return [
+    'cache' => true,
     'baseUrl' => '',
     'production' => false,
     'siteName' => 'La Caténaire',
     'siteDescription' => "Lieu de travail, de production et collaboration, la Caténaire regroupe une agence d'architecture, une agence de coordination et d'édition, une radio, l'association Quatre 4.0/L'Ososphère et l'association Créative Vintage.",
     
-    'opening_hours' => null, // coming from jocko
-    'address' => null, // coming from jocko
-    'facebook_url' => null, // coming from jocko
-    'instagram_url' => null, // coming from jocko
-    'linkedin_url' => null, // coming from jocko
-    'contact_text' => null, // coming from jocko
+    // coming from jocko
+    'opening_hours' => null,
+    'address' => null,
+    'facebook_url' => null,
+    'instagram_url' => null,
+    'linkedin_url' => null,
+    'contact_email' => null,
+    'contact_phone' => null,
     
     'collections' => [
         'pages' => [], // pages collection aimed to be queried in specific blade file. (e.g $pages->firstWhere('key', 'home'))

@@ -1,8 +1,6 @@
 @props([
-    'spaces' => \Illuminate\Container\Container::getInstance()->get('pageData')->spaces,
+    'page' => \Illuminate\Container\Container::getInstance()->get('pageData')->page,
 ])
-
-@php(ray($spaces))
 
 <div class="relative overflow-hidden">
     <div class="flex flex-nowrap py-4 gap-16
@@ -12,7 +10,7 @@
         @foreach(range(1, 10) as $i)
             <div class="min-w-fit">
                 @if($loop->first)
-                    <a class="after:absolute after:inset-0" href="{{ $spaces->first()?->getUrl() }}">
+                    <a class="after:absolute after:inset-0" href="mailto:{{ $page->contact_email }}">
                         Louer un espace
                     </a>
                 @else

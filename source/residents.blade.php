@@ -6,12 +6,14 @@
 @endphp
 
 <x-layout active-nav="residents">
-    <h1 class="sr-only">
-        Les résidents
-    </h1>
+    <x-boom-title class="md:sr-only pl-8">
+        <h1>
+            Les résidents
+        </h1>
+    </x-boom-title>
     @foreach($residents as $resident)
-        <div class="grid grid-cols-2 gap-12 mb-24">
-            <div>
+        <div class="grid md:grid-cols-2 gap-6 md:gap-12 mb-24">
+            <div class="order-1 md:order-none">
                 <h2 class="text-3xl uppercase text-orange font-bold mb-4">
                     {{ $resident->title }}
                 </h2>

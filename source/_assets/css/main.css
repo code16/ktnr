@@ -12,11 +12,18 @@
     --primary: #FF6D00;
   }
 
-  svg:not([fill]) {
+  svg {
     fill: currentColor;
   }
-}
 
+  svg[fill=none]:not([class*="stroke-"]) {
+    stroke: currentColor;
+  }
+
+  svg[fill=none]:not([class*="fill-"]) {
+    fill: none;
+  }
+}
 
 @layer utilities {
   .scrollbar-none::-webkit-scrollbar {

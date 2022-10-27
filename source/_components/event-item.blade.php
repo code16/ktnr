@@ -19,31 +19,27 @@
     !!}
 </div>
 <div {{ $attributes->class([
-    'relative flex gap-12  mb-8 -mx-8 px-8 py-4 border border-white rounded',
+    'relative flex flex-wrap gap-4 lg:gap-12 mb-8 -mx-[var(--padding-x)] px-[var(--padding-x)] py-4 border border-white rounded',
     'bg-white text-black' => $light
 ]) }}>
-    <div class="w-3/12">
+    <div class="flex-1 lg:flex-none lg:w-3/12">
         <h2 class="text-2xl uppercase font-bold">
-            @if($event->url)
-                <a class="after:absolute after:inset-0 hover:underline" href="{{ $event->url }}">
-                    {!! $event->title !!}
-                </a>
-            @else
+            <x-link class="after:absolute after:inset-0 hover:underline" :href="$event->url" target="_blank">
                 {!! $event->title !!}
-            @endif
+            </x-link>
         </h2>
     </div>
-    <div class="flex-1">
+    <div class="lg:flex-1 w-full lg:w-auto order-1 lg:order-none">
         <x-content>
             {!! $event->getContent() !!}
         </x-content>
     </div>
-    <div class="self-center">
-        <div @class(['border border-current w-10 h-10 p-1', 'invisible' => !$event->url])>
+    <div @class(['md:self-center', 'hidden md:block' => !$event->url])>
+        <div @class(['border border-current w-8 h-8 lg:w-10 lg:h-10 p-1', 'invisible' => !$event->url])>
             @if(str_contains($event->url, 'facebook.com'))
                 <x-icon-facebook class="w-full h-full" />
             @else
-
+                <x-icon-web class="w-full h-full" />
             @endif
         </div>
     </div>
