@@ -5,8 +5,12 @@
     'link' => null,
 ])
 
+<x-title>
+    {{ $title }}
+</x-title>
+
 <div class="px-[var(--padding-x)] [--padding-x:1rem] lg:[--padding-x:2rem]">
-    <x-boom-title orange>
+    <x-boom-title class="text-3xl md:text-5xl italic mb-16" orange>
         <h1>
             {{ $title }}
         </h1>

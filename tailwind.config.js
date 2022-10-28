@@ -1,5 +1,6 @@
 const tailwind = {
   defaultTheme: require('tailwindcss/defaultTheme'),
+  plugin: require('tailwindcss/plugin'),
 }
 
 module.exports = {
@@ -25,8 +26,8 @@ module.exports = {
         'sans': ['Century Gothic', ...tailwind.defaultTheme.fontFamily.sans],
       },
       fontSize: {
-        '5xl': ['3rem', '1.2'],
-        '7xl': ['4rem', '.8'],
+        '5xl': ['3rem', { lineHeight: '1.2'}],
+        '7xl': ['4rem', { lineHeight: '.8' }],
       }
     },
   },

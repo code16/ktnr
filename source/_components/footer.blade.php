@@ -3,7 +3,7 @@
 ])
 
 <footer>
-    <div class="border-t-2 border-t-orange">
+    <div class="border-t-2 border-t-orange [&_a:hover]:text-orange">
         <x-container class="pt-12 pb-24">
             <div class="grid justify-center sm:block">
                 <div class="grid sm:flex items-start justify-between flex-wrap md:flex-nowrap gap-8 md:gap-12 lg:gap-16">
@@ -26,7 +26,7 @@
                         <a href="{{ $page->instagram_url }}" target="_blank">
                             <x-icon-instagram height="45" />
                         </a>
-                        <a href="{{ $page->instagram_url }}" target="_blank">
+                        <a href="{{ $page->linkedin_url }}" target="_blank">
                             <x-icon-linkedin height="45" />
                         </a>
                     </div>

@@ -9,11 +9,32 @@
     :page="$page = $pages->firstWhere('key', 'contact')"
     active-nav="contact"
 >
-    <h1 class="text-3xl font-bold">
-        {{ $page->title }}
-    </h1>
-
-    <div class="mt-4">
-        {!! $page->getContent() !!}
+    <div class="pb-12">
+        <div class="flex flex-wrap justify-center gap-12">
+            <div class="w-full lg:flex-1 order-1 lg:order-none">
+                <img src="{{ $page->cover->thumbnail(1024) }}" alt="Carte adresse La caténaire">
+            </div>
+            <div class="lg:w-[400px]">
+                <h1 class="text-3xl font-bold uppercase mb-12">
+                    {{ $page->title }}
+                </h1>
+                <x-content class="text-lg" heading-level="h2">
+                    {!! $page->getContent() !!}
+                </x-content>
+                <div class="mt-12">
+                    <div class="flex gap-12 items-center [&_a:hover]:text-orange">
+                        <a href="{{ $page->facebook_url }}" target="_blank">
+                            <x-icon-facebook height="42" />
+                        </a>
+                        <a href="{{ $page->instagram_url }}" target="_blank">
+                            <x-icon-instagram height="50" />
+                        </a>
+                        <a href="{{ $page->linkedin_url }}" target="_blank">
+                            <x-icon-linkedin height="50" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </x-layout>

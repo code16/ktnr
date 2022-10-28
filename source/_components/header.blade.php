@@ -6,10 +6,10 @@
 <header>
     <x-container class="mb-12">
         <div class="flex justify-center">
-            <div>
-                <div class="flex justify-center border-b-2 border-white py-12">
+            <div class="min-w-[300px]">
+                <div class="flex justify-center border-b-2 border-white py-6 md:py-12">
                     <a href="/">
-                        <img width="250" src="/assets/img/logo.png" alt="La Caténaire">
+                        <img class="w-[200px] md:w-[250px]" src="/assets/img/logo.png" width="250" height="52" alt="La Caténaire">
                     </a>
                 </div>
                 <div x-data="{ open: false }">

@@ -3,7 +3,7 @@
 ])
 
 <div class="relative overflow-hidden">
-    <div class="flex flex-nowrap py-4 gap-16
+    <div class="flex flex-nowrap py-4 px-4 gap-16
         bg-white hover:bg-orange focus-within:bg-orange
         text-black text-3xl uppercase italic font-bold leading-none
     ">

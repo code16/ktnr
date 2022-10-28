@@ -3,15 +3,23 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="{{ $page->description ?? $page->siteDescription }}">
 
-        <meta property="og:title" content="{{ $page->title ? $page->title . ' - ' : '' }}{{ $page->siteName }}"/>
+        @php($title ??= $page->title)
+        @php($title = ($title ? trim($title) . ' - ' : '') . $page->siteName)
+        @php($description ??= $page->content ? \Illuminate\Support\Str::limit(strip_tags($page->content), 300) : $page->siteDescription)
+
+        <title>{{ $title }}</title>
+
+        <meta name="description" content="{{ $description }}">
+
+        <meta property="og:title" content="{{ $title }}"/>
         <meta property="og:type" content="{{ $page->type ?? 'website' }}" />
         <meta property="og:url" content="{{ $page->getUrl() }}"/>
-        <meta property="og:description" content="{{ $page->description ?? $page->siteDescription }}" />
+        <meta property="og:description" content="{{ $description }}" />
 
-        <title>{{ $page->title ? $page->title . ' - ' : '' }}{{ $page->siteName }}</title>
         <link rel="stylesheet" href="{{ mix('css/main.css', 'assets/build') }}">
+
+{{--        <link rel="icon" href="/assets/favicons/favicon.png" type="image/png">--}}
 
         <link rel="preload" href="/assets/fonts/CenturyGothic.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="/assets/fonts/CenturyGothic-Bold.woff2" as="font" type="font/woff2" crossorigin>
@@ -29,7 +37,7 @@
         <div class="flex flex-col min-h-screen overflow-x-hidden">
             <x-header :active-nav="$activeNav" />
 
-            <div class="flex-grow pb-16">
+            <div class="flex-grow pb-24 md:pb-32">
                 @if($container)
                     <x-container>
                         {{ $slot }}

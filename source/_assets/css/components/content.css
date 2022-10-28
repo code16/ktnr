@@ -1,7 +1,27 @@
 
 .content {
   & a {
-    color: var(--primary);
-    text-decoration: underline;
+    &:hover {
+      color: var(--primary);
+    }
+  }
+  & h2 {
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    margin-top: 3rem;
+    & + & {
+      margin-top: -1.5rem;
+    }
+  }
+  & p {
+    margin-bottom: 1rem;
+  }
+  & > :first-child {
+    margin-top: 0;
+  }
+  & > :last-child {
+    margin-bottom: 0;
   }
 }

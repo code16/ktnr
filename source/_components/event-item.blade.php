@@ -19,7 +19,7 @@
     !!}
 </div>
 <div {{ $attributes->class([
-    'relative flex flex-wrap gap-4 lg:gap-12 mb-8 -mx-[var(--padding-x)] px-[var(--padding-x)] py-4 border border-white rounded',
+    'relative flex flex-wrap gap-4 lg:gap-12 mb-8 -mx-[var(--padding-x)] px-[var(--padding-x)] py-4 border-2 border-white rounded',
     'bg-white text-black' => $light
 ]) }}>
     <div class="flex-1 lg:flex-none lg:w-3/12">
@@ -35,7 +35,7 @@
         </x-content>
     </div>
     <div @class(['md:self-center', 'hidden md:block' => !$event->url])>
-        <div @class(['border border-current w-8 h-8 lg:w-10 lg:h-10 p-1', 'invisible' => !$event->url])>
+        <div @class(['border-2 border-current rounded w-8 h-8 lg:w-10 lg:h-10 p-1', 'invisible' => !$event->url])>
             @if(str_contains($event->url, 'facebook.com'))
                 <x-icon-facebook class="w-full h-full" />
             @else

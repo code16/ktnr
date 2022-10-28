@@ -1,6 +1,7 @@
 @props([
     'imageThumbnailWidth',
     'imageThumbnailHeight',
+    'headingLevel',
 ])
 
 <div {{ $attributes->class('content') }}>

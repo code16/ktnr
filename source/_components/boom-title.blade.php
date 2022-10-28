@@ -3,7 +3,7 @@
 ])
 
 <div {{ $attributes->class([
-    'relative text-5xl font-bold italic mb-16',
+    'relative font-bold',
     'text-orange' => $orange
 ]) }}>
     <x-icon-boom-title
@@ -13,7 +13,7 @@
         ])
         style="transform: translateX(-35%)"
     />
-    <div>
+    <div class="grid items-center" style="min-height: 1.2em">
         {{ $slot }}
     </div>
 </div>

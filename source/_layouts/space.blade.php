@@ -32,7 +32,7 @@
 
     @if($page->surface)
         <div class="flex justify-center">
-            <div class="relative text-5xl -mb-[1.15em] z-10">
+            <div class="relative text-3xl lg:text-5xl -mb-[1.15em] z-10">
                 <x-icon-boom class="stroke-orange fill-black" width="6em" />
                 <div class="absolute inset-0 grid place-items-center">
                     <div class="text-white italic font-bold">
@@ -80,14 +80,14 @@
             @endif
         @endif
 
-        <x-content class="mt-16" :image-thumbnail-width="1024">
+        <x-content class="mt-16" :image-thumbnail-width="1024" heading-level="h2">
             {!! $page->getContent() !!}
         </x-content>
 
         @if($page->surface)
             <div class="mt-16">
                 <div class="flex justify-center">
-                    <x-boom-title class="mb-8">
+                    <x-boom-title class="text-4xl md:text-5xl mb-8">
                         <h2>
                             Reservé
                         </h2>
