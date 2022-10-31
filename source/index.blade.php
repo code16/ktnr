@@ -2,6 +2,7 @@
 /**
  * @var \Code16\Jigsaw\Page $page
  * @var \TightenCo\Jigsaw\PageVariable|\Code16\Jigsaw\Page[] $events
+ * @var \TightenCo\Jigsaw\PageVariable|\Code16\Jigsaw\Page[] $residents
  */
 @endphp
 
@@ -65,21 +66,11 @@
             </div>
 
             <div class="flex flex-col md:flex-row flex-wrap gap-6 xl:gap-12 items-center justify-between">
-                <x-home.resident-logo>
-                    <img width="200" src="/assets/img/residents/candide.png" alt="Candide">
-                </x-home.resident-logo>
-                <x-home.resident-logo>
-                  <img width="150" src="/assets/img/residents/cnb.png" alt="CNB archi">
-                </x-home.resident-logo>
-                <x-home.resident-logo>
-                    <img width="150" src="/assets/img/residents/creative-vintage.png" alt="Creative Vintage">
-                </x-home.resident-logo>
-                <x-home.resident-logo>
-                    <img width="150" src="/assets/img/residents/radio-en-construction.png" alt="Radio en construction">
-                </x-home.resident-logo>
-                <x-home.resident-logo>
-                    <img width="200" src="/assets/img/residents/ososphere.png" alt="L'ososphère">
-                </x-home.resident-logo>
+                <x-home.resident-logo width="200" :resident="$residents->firstWhere('key', 'candide')" />
+                <x-home.resident-logo width="150" :resident="$residents->firstWhere('key', 'cnb')" />
+                <x-home.resident-logo width="150" :resident="$residents->firstWhere('key', 'creative-vintage')" />
+                <x-home.resident-logo width="150" :resident="$residents->firstWhere('key', 'radio-en-construction')" />
+                <x-home.resident-logo width="200" :resident="$residents->firstWhere('key', 'ososphere')" />
             </div>
         </div>
 
