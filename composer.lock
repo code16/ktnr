@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b2e87a062eb519fb22e209a24f15ab66",
+    "content-hash": "653872139d485dc2afd6d45a08d50499",
     "packages": [
         {
             "name": "code16/jigsaw",
@@ -4316,5 +4316,8 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
+    "platform-overrides": {
+        "php": "8.0.24"
+    },
     "plugin-api-version": "2.2.0"
 }

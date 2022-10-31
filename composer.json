@@ -18,6 +18,9 @@
         }
     },
     "config": {
-        "github-protocols": ["https"]
+        "github-protocols": ["https"],
+        "platform": {
+            "php": "8.0.24"
+        }
     }
 }
