@@ -19,7 +19,10 @@
 
         <link rel="stylesheet" href="{{ mix('css/main.css', 'assets/build') }}">
 
-{{--        <link rel="icon" href="/assets/favicons/favicon.png" type="image/png">--}}
+        <link rel="icon" href="/favicon.ico">
+        <link rel="icon" href="/assets/favicons/favicon-32x32.png" type="image/png" sizes="32x32">
+        <link rel="apple-touch-icon" href="/assets/favicons/apple-touch-icon.png">
+        <link rel="manifest" href="/assets/favicons/manifest.json">
 
         <link rel="preload" href="/assets/fonts/CenturyGothic.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="/assets/fonts/CenturyGothic-Bold.woff2" as="font" type="font/woff2" crossorigin>

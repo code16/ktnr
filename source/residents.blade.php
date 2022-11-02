@@ -18,11 +18,13 @@
         </x-boom-title>
         <div class="space-y-24">
             @foreach($residents as $resident)
-                <div class="grid md:grid-cols-2 gap-6 md:gap-12">
+                <div class="relative grid md:grid-cols-2 gap-6 md:gap-12">
                     <div class="order-1 md:order-none">
                         <x-boom-title class="text-xl sm:text-3xl lg:text-4xl uppercase mb-4" orange>
                             <h2>
-                                {{ $resident->title }}
+                                <x-link class="after:absolute after:inset-0 hover:underline" href="{{ $resident->url }}" target="_blank">
+                                    {{ $resident->title }}
+                                </x-link>
                             </h2>
                         </x-boom-title>
                         <x-content>

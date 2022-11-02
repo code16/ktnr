@@ -2,10 +2,7 @@
     'orange' => false,
 ])
 
-<div {{ $attributes->class([
-    'relative font-bold',
-    'text-orange' => $orange
-]) }}>
+<div {{ $attributes->class(['font-bold', 'text-orange' => $orange]) }}>
     <x-icon-boom-title
         @class([
             'w-[2em] -mb-[.5em]',
