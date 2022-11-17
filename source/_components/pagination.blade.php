@@ -4,17 +4,17 @@
 ])
 
 @if(count($pagination->pages) > 1)
-    <div {{ $attributes->class('flex justify-center gap-2') }}>
+    <div {{ $attributes->class('flex flex-wrap justify-center') }}>
         @foreach ($pagination->pages as $pageNumber => $path)
-            <a href="{{ $page->baseUrl }}{{ $path }}"
-                @class(['font-bold' => $pagination->currentPage == $pageNumber])
+            <a @class(['block px-2 py-1 hover:font-bold hover:text-orange', 'font-bold' => $pagination->currentPage == $pageNumber])
+                href="{{ $page->baseUrl }}{{ $path }}"
             >
                 {{ $pageNumber }}
             </a>
             @if(!$loop->last)
-                <span>
+                <div class="py-1">
                     .
-                </span>
+                </div>
             @endif
         @endforeach
     </div>
