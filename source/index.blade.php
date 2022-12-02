@@ -47,11 +47,13 @@
                     </x-ui.carousel.item>
                 @endforeach
             </x-ui.carousel.scroller>
-            <button class="absolute right-0 top-0 h-full w-1/6 hidden md:flex items-center justify-end px-4"
-                @click="slideNext()"
-            >
-                <x-icon-arrow-large-right class="w-12" />
-            </button>
+            @if(count($events) > 1)
+                <button class="absolute right-0 top-0 h-full w-1/6 hidden md:flex items-center justify-end px-4"
+                    @click="slideNext()"
+                >
+                    <x-icon-arrow-large-right class="w-12" />
+                </button>
+            @endif
         </x-ui.carousel>
     @endif
 
