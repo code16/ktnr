@@ -20,15 +20,21 @@
                         {!! $page->address !!}
                     </x-footer.section>
                     <div class="flex gap-8 justify-center items-center md:ml-auto mt-2 order-1 md:order-none w-full md:w-auto">
-                        <a href="{{ $page->facebook_url }}" target="_blank">
-                            <x-icon-facebook height="38" />
-                        </a>
-                        <a href="{{ $page->instagram_url }}" target="_blank">
-                            <x-icon-instagram height="45" />
-                        </a>
-                        <a href="{{ $page->linkedin_url }}" target="_blank">
-                            <x-icon-linkedin height="45" />
-                        </a>
+                        @if($page->facebook_url)
+                            <a href="{{ $page->facebook_url }}" target="_blank">
+                                <x-icon-facebook height="38" />
+                            </a>
+                        @endif
+                        @if($page->instagram_url)
+                            <a href="{{ $page->instagram_url }}" target="_blank">
+                                <x-icon-instagram height="45" />
+                            </a>
+                        @endif
+                        @if($page->linkedin_url)
+                            <a href="{{ $page->linkedin_url }}" target="_blank">
+                                <x-icon-linkedin height="45" />
+                            </a>
+                        @endif
                     </div>
                     <x-footer.section>
                         <x-slot:title>
