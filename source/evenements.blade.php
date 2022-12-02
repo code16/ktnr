@@ -11,7 +11,7 @@ pagination:
         </x-slot:title>
 
         @if(count($pastEvents))
-            <x-slot:link href="{{ url('/historique') }}">
+            <x-slot:link href="/historique/">
                 Historique des événements
             </x-slot:link>
         @endif

@@ -1,5 +1,5 @@
 @props([
-    'page' => \Illuminate\Container\Container::getInstance()->get('pageData')->page,
+    'page' => app('pageData')->page,
 ])
 
 <footer>
