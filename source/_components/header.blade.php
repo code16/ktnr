@@ -19,17 +19,17 @@
                             Menu
                         </button>
                     </div>
-                    <div class="md:!grid md:!h-auto md:!overflow-visible md:grid-flow-col " x-show="open" x-collapse>
-                        <x-header.nav-item href="/evenements" :active="$activeNav === 'events'">
+                    <div class="md:!grid md:!h-auto md:!overflow-visible md:grid-flow-col" x-show="open" x-collapse>
+                        <x-header.nav-item href="/evenements/" :active="$activeNav === 'events'">
                             Nos événements
                         </x-header.nav-item>
-                        <x-header.nav-item href="/residents" :active="$activeNav === 'residents'">
+                        <x-header.nav-item href="/residents/" :active="$activeNav === 'residents'">
                             Les résidents
                         </x-header.nav-item>
                         <x-header.nav-item :href="$spaces->first()?->getUrl()" :active="$activeNav === 'spaces'">
                             Nos espaces
                         </x-header.nav-item>
-                        <x-header.nav-item href="/contact" :active="$activeNav === 'contact'">
+                        <x-header.nav-item href="/contact/" :active="$activeNav === 'contact'">
                             Contact
                         </x-header.nav-item>
                     </div>

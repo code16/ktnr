@@ -36,7 +36,7 @@
     </div>
     <div @class(['md:self-center', 'hidden md:block' => !$event->url])>
         <div @class(['border-2 border-current rounded w-8 h-8 lg:w-10 lg:h-10 p-1', 'invisible' => !$event->url])>
-            @if(str_contains($event->url, 'facebook.com'))
+            @if(str_contains($event->url ?? '', 'facebook.com'))
                 <x-icon-facebook class="w-full h-full" />
             @else
                 <x-icon-web class="w-full h-full" />

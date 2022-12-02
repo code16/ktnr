@@ -1,5 +1,5 @@
 @props([
-    'page' => \Illuminate\Container\Container::getInstance()->get('pageData')->page,
+    'page' => app('pageData')->page,
     'pagination',
 ])
 
@@ -7,7 +7,7 @@
     <div {{ $attributes->class('flex flex-wrap justify-center') }}>
         @foreach ($pagination->pages as $pageNumber => $path)
             <a @class(['block px-2 py-1 hover:font-bold hover:text-orange', 'font-bold' => $pagination->currentPage == $pageNumber])
-                href="{{ $page->baseUrl }}{{ $path }}"
+                href="{{ $path }}/"
             >
                 {{ $pageNumber }}
             </a>

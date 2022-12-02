@@ -10,7 +10,7 @@ pagination:
             Historique des événements
         </x-slot:title>
 
-        <x-slot:link href="{{ url('/evenements') }}">
+        <x-slot:link href="/evenements/">
             Retour aux événements actuels
         </x-slot:link>
     </x-layout.events>
