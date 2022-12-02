@@ -7,12 +7,14 @@
         <x-container class="pt-12 pb-24">
             <div class="grid justify-center sm:block">
                 <div class="grid sm:flex items-start justify-between flex-wrap md:flex-nowrap gap-8 md:gap-12 lg:gap-16">
-                    <x-footer.section>
-                        <x-slot:title>
-                            Horaires
-                        </x-slot:title>
-                        {!! $page->opening_hours !!}
-                    </x-footer.section>
+                    @if($page->opening_hours)
+                        <x-footer.section>
+                            <x-slot:title>
+                                Horaires
+                            </x-slot:title>
+                            {!! $page->opening_hours !!}
+                        </x-footer.section>
+                    @endif
                     <x-footer.section>
                         <x-slot:title>
                             Adresse
