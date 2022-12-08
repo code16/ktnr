@@ -23,15 +23,21 @@
                 </x-content>
                 <div class="mt-12">
                     <div class="flex gap-12 items-center [&_a:hover]:text-orange">
-                        <a href="{{ $page->facebook_url }}" target="_blank">
-                            <x-icon-facebook height="42" />
-                        </a>
-                        <a href="{{ $page->instagram_url }}" target="_blank">
-                            <x-icon-instagram height="50" />
-                        </a>
-                        <a href="{{ $page->linkedin_url }}" target="_blank">
-                            <x-icon-linkedin height="50" />
-                        </a>
+                        @if($page->facebook_url)
+                            <a href="{{ $page->facebook_url }}" target="_blank">
+                                <x-icon-facebook height="42" />
+                            </a>
+                        @endif
+                        @if($page->instagram_url)
+                            <a href="{{ $page->instagram_url }}" target="_blank">
+                                <x-icon-instagram height="50" />
+                            </a>
+                        @endif
+                        @if($page->linkedin_url)
+                            <a href="{{ $page->linkedin_url }}" target="_blank">
+                                <x-icon-linkedin height="50" />
+                            </a>
+                        @endif
                     </div>
                 </div>
             </div>

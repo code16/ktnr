@@ -7,12 +7,14 @@
         <x-container class="pt-12 pb-24">
             <div class="grid justify-center sm:block">
                 <div class="grid sm:flex items-start justify-between flex-wrap md:flex-nowrap gap-8 md:gap-12 lg:gap-16">
-                    <x-footer.section>
-                        <x-slot:title>
-                            Horaires
-                        </x-slot:title>
-                        {!! $page->opening_hours !!}
-                    </x-footer.section>
+                    @if($page->opening_hours)
+                        <x-footer.section>
+                            <x-slot:title>
+                                Horaires
+                            </x-slot:title>
+                            {!! $page->opening_hours !!}
+                        </x-footer.section>
+                    @endif
                     <x-footer.section>
                         <x-slot:title>
                             Adresse
@@ -20,15 +22,21 @@
                         {!! $page->address !!}
                     </x-footer.section>
                     <div class="flex gap-8 justify-center items-center md:ml-auto mt-2 order-1 md:order-none w-full md:w-auto">
-                        <a href="{{ $page->facebook_url }}" target="_blank">
-                            <x-icon-facebook height="38" />
-                        </a>
-                        <a href="{{ $page->instagram_url }}" target="_blank">
-                            <x-icon-instagram height="45" />
-                        </a>
-                        <a href="{{ $page->linkedin_url }}" target="_blank">
-                            <x-icon-linkedin height="45" />
-                        </a>
+                        @if($page->facebook_url)
+                            <a href="{{ $page->facebook_url }}" target="_blank">
+                                <x-icon-facebook height="38" />
+                            </a>
+                        @endif
+                        @if($page->instagram_url)
+                            <a href="{{ $page->instagram_url }}" target="_blank">
+                                <x-icon-instagram height="45" />
+                            </a>
+                        @endif
+                        @if($page->linkedin_url)
+                            <a href="{{ $page->linkedin_url }}" target="_blank">
+                                <x-icon-linkedin height="45" />
+                            </a>
+                        @endif
                     </div>
                     <x-footer.section>
                         <x-slot:title>
