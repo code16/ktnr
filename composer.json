@@ -1,10 +1,10 @@
 {
     "require": {
-        "code16/jigsaw": "dev-main"
+        "code16/jigsaw": "dev-main",
+        "blade-ui-kit/blade-icons": "^1.4"
     },
     "require-dev": {
-        "spatie/ray": "^1.36",
-        "blade-ui-kit/blade-icons": "^1.4"
+        "spatie/ray": "^1.36"
     },
     "repositories": [
         {
@@ -20,7 +20,7 @@
     "config": {
         "github-protocols": ["https"],
         "platform": {
-            "php": "8.0.25"
+            "php": "8.1.3"
         }
     }
 }
