@@ -1,4 +1,5 @@
 [build]
+PHP_VERSION = "8.1"
 NPM_FLAGS = "--version" # prevent running npm install
 command = "./vendor/bin/jigsaw build production"
 publish = "build_production"
