@@ -10,6 +10,10 @@ pagination:
             Les événements à La Caténaire
         </x-slot:title>
 
+        <x-slot:empty>
+            Pas d’événements prévus pour le moment !
+        </x-slot:empty>
+
         @if(count($pastEvents))
             <x-slot:link href="/historique/">
                 Historique des événements
