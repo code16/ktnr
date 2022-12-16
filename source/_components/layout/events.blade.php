@@ -3,6 +3,7 @@
     // slots
     'title',
     'link' => null,
+    'empty' => null,
 ])
 
 <x-title>
@@ -21,7 +22,7 @@
             <x-event-item :event="$event" :light="$loop->even" />
         @endforeach
     @else
-{{--        Aucun événement pour le moment !--}}
+        {{ $empty }}
     @endif
 </div>
 
