@@ -21,7 +21,7 @@
             <x-event-item :event="$event" :light="$loop->even" />
         @endforeach
     @else
-        Aucun événement pour le moment !
+{{--        Aucun événement pour le moment !--}}
     @endif
 </div>
 
