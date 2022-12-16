@@ -6,6 +6,7 @@
     <div class="flex flex-nowrap py-4 px-4 gap-16
         bg-white hover:bg-orange focus-within:bg-orange
         text-black text-3xl uppercase italic font-bold leading-none
+        whitespace-nowrap
     ">
         @foreach(range(1, 10) as $i)
             <div class="min-w-fit">
