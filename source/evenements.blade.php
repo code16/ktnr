@@ -1,7 +1,7 @@
 ---
 pagination:
-  collection: events
-  perPage: 5
+    collection: events
+    perPage: 5
 ---
 
 <x-layout active-nav="events">

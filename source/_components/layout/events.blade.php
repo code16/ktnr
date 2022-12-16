@@ -16,9 +16,13 @@
         </h1>
     </x-boom-title>
 
-    @foreach($pagination->items as $event)
-        <x-event-item :event="$event" :light="$loop->even" />
-    @endforeach
+    @if(count($pagination->items))
+        @foreach($pagination->items as $event)
+            <x-event-item :event="$event" :light="$loop->even" />
+        @endforeach
+    @else
+{{--        Aucun événement pour le moment !--}}
+    @endif
 </div>
 
 <x-pagination class="mt-12" :pagination="$pagination" />
